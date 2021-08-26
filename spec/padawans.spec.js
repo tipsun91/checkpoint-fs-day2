@@ -8,7 +8,7 @@ const {
 
 describe('Статистика о падаванах', () => {
   it('getPadawanNames не использует синхронное чтение', () => {
-    expect(getPadawanNames.tostring()).not.toMatch(/Sync/);
+    expect(getPadawanNames.toString()).not.toMatch(/Sync/);
   });
   it('getPadawanNames возвращает список падаванов из файла `data/padawans.txt`', () => {
     const names = getPadawanNames();
