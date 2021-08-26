@@ -7,6 +7,9 @@ const {
 } = require('../padawans');
 
 describe('Статистика о падаванах', () => {
+  it('getPadawanNames не использует синхронное чтение', () => {
+    expect(getPadawanNames.tostring()).not.toMatch(/Sync/);
+  });
   it('getPadawanNames возвращает список падаванов из файла `data/padawans.txt`', () => {
     const names = getPadawanNames();
     expect(names).toEqual(['Revan', 'Bastila Shan', 'Jolee Bindo', 'Juhani']);
