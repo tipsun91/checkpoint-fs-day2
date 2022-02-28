@@ -15,7 +15,7 @@ describe('Статистика о падаванах', () => {
     const names = getLightsaberScores();
     expect(names).toEqual([99.9, 92, 87, 82]);
   });
-  it('getStat возвращает таблицу соответствия падавана и оценки владения световым мечом и сохраняет результат в файл `data/stats.txt`', () => {
+  it('getStats возвращает таблицу соответствия падавана и оценки владения световым мечом', () => {
     const stats = getStats();
     expect(stats).toEqual([
       ['Revan', 99.9],
